@@ -6,8 +6,12 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  // Variavel local sqlite
+  // provider = "sqlite"
+  // url      = env("DATABASE_URL")
+  provider = "postgresql"
   url      = env("DATABASE_URL")
+
 }
 
 model Feedback {
